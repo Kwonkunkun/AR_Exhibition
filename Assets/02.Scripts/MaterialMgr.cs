@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MaterialMgr : MonoBehaviour
 {
-    public Material ball;
+    public Material bigBall;
+    public Material smallBall;
     public Material seaFood;
 
     public float attenstionVal = 0.0f;
@@ -24,7 +25,8 @@ public class MaterialMgr : MonoBehaviour
 
     void ChangeIntensity()
     {
-        ball.SetFloat("_intensity", attenstionVal);
-        seaFood.SetFloat("_intensity", meditationVal * 1.5f);
+        bigBall.SetFloat("_intensity", attenstionVal * 2f);
+        smallBall.SetFloat("_intensity", attenstionVal * 1.5f);
+        seaFood.SetFloat("_intensity", attenstionVal * 3f);
     }
 }
